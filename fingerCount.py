@@ -1,8 +1,9 @@
 import cv2
 import time
 import os
+import pyautogui
 import handTrackingmodule as htm
-
+import time
 cap = cv2.VideoCapture(0)
 wCam, hCam = 640, 480
 cap.set(3, wCam)
@@ -44,7 +45,25 @@ while True:
                 fingers.append(0)
         #print(fingers)
         totalFingers = fingers.count(1)
-
+        ##
+        ip=int(totalFingers)
+        if ip==1:
+            print('1')
+            pyautogui.hotkey('ctrl','s')
+        if ip==2:
+            print('2')
+            pyautogui.hotkey('alt', 'F4')
+        if ip==3:
+            print('3')
+            pyautogui.hotkey('ctrl','c')
+        if ip==4:
+            print('4')
+            pyautogui.hotkey('ctrl','p')
+        if ip==5:
+            print('5')
+            pyautogui.hotkey('ctrl','v')
+        time.sleep(3)
+        ##
         h, w, c = overlayList[totalFingers].shape
         img[0:h, 0:w] = overlayList[totalFingers]
 
@@ -60,3 +79,5 @@ while True:
     key=cv2.waitKey(1)
     if key==81 or key==113:
         break
+
+    #werwefwafqdqwdqsefesfs jh 
