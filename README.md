@@ -3,13 +3,13 @@ This repository is for the project for the upcoming Smart India Hackathon 2022.
 
 ## Problem Statement:
 Automate frequently used tasks of a pc using gestures, provided users are *authenticate by face recognition*. Tasks to automate:
-    * save
-    * exit
-    * print
-    * screen-lock
-    * screen-unlock
-    * system shut down
-    * system restart
+* save
+* exit
+* print
+* screen-lock
+* screen-unlock
+* system shut down
+* system restart
 
 ## Prototype:
 Divided into three parts
