@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image
 
 
-recognizer = cv2.face.createLBPHFaceRecognizer() # instantiate the lbph recognizer
+recognizer = cv2.face.LBPHFaceRecognizer_create() # instantiate the lbph recognizer
 
 
 path = 'gray_images' #setting out path of folders with images
