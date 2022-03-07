@@ -2,8 +2,8 @@ import csv
 import cv2
 import os
 
-if not os.path.exists('./dataset'):
-    os.makedirs('./dataset')
+if not os.path.exists('C:/NEERAJ/HACKATHON/Smart-India-Hackathon-2022/face recognition/dataset'):
+    os.makedirs('C:/NEERAJ/HACKATHON/Smart-India-Hackathon-2022/face recognition/dataset')
 
 name = input("enter your name")
 roll = input("enter your id")
@@ -11,12 +11,12 @@ row = [name,roll,'A']
 
 
 l =[]
-for root ,dire,filenames in os.walk('dataset'):
+for root ,dire,filenames in os.walk('C:/NEERAJ/HACKATHON/Smart-India-Hackathon-2022/face recognition/dataset'):
     for names in dire:
         l.append(int(names))
 
-folder = str(l[-1]+1)
-os.makedirs(f'./dataset/{folder}')
+folder = str(0)
+os.makedirs(f'C:/NEERAJ/HACKATHON/Smart-India-Hackathon-2022/face recognition/dataset/{folder}')
 
 def add(row):
     with open('data.csv','a') as f:
@@ -54,7 +54,7 @@ while True:
         cv2.waitKey(100)
     cv2.imshow('img',frame)
     cv2.waitKey(1)
-    if framecount >200:
+    if framecount >20:
         break
 
 

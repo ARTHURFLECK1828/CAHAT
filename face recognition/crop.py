@@ -3,7 +3,7 @@ import os
 import numpy as np
 
 count=0
-if not os.path.exists('/Users/jaisurajbantupalli/Desktop/Automated-Attendance-System-By-Real-Time-Face-Recognition//cropped_images'):
+if not os.path.exists('C:/NEERAJ/HACKATHON/Smart-India-Hackathon-2022/cropped_images'):
     os.makedirs('./cropped_images')
 
 for path, subdirnames, filenames in os.walk("dataset"):
