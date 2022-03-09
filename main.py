@@ -1,6 +1,8 @@
 import sys
 import time
 import ctypes
+from tkinter import * 
+from tkinter import messagebox
 # insert at 1, 0 is the script path (or '' in REPL)
 sys.path.append('C:/NEERAJ/HACKATHON/Smart-India-Hackathon-2022/Gesture_Control')
 import fingerCount
@@ -11,7 +13,8 @@ import main_video
 try:
     name = main_video.main_video()
     if(name=="unknown"):
-        print('Get a new face')
+        
+        #messagebox.showwarning("Warning Face not Found", "Warning")
         ctypes.windll.user32.LockWorkStation()
         exit(0)
     else:

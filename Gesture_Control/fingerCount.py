@@ -5,6 +5,10 @@ import pyautogui
 import handTrackingmodule as htm
 import time
 
+from tkinter import * 
+from tkinter import messagebox
+
+
 def fingerCount():
     cap = cv2.VideoCapture(0)
     wCam, hCam = 640, 480
@@ -24,6 +28,7 @@ def fingerCount():
 
 
     while True:
+        
         success, img = cap.read()
         img = detector.findHands(img)
         lmList = detector.findPosition(img, draw=False)
@@ -49,11 +54,25 @@ def fingerCount():
             totalFingers = fingers.count(1)
             ##
             ip=int(totalFingers)
+            # if ip==0:
+            #     print(0)
+            #     os.system("shutdown /r /t  1")
             if ip==1:
                 print('1')
+
                 pyautogui.hotkey('ctrl','s')
             if ip==2:
                 print('2')
+                # root = Tk()  
+                # root.geometry("100x100")  
+                # response=messagebox.askquestion("Would you like to close the window", "Are you sure?")
+                # print(response)
+                # if response=="Yes":
+                #     root.destroy()
+                # else:
+                #     root.destory()
+                    
+                # root.mainloop()  
                 pyautogui.hotkey('alt', 'F4')
             if ip==3:
                 print('3')
